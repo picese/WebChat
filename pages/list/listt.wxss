@@ -1,0 +1,38 @@
+/* 详情页样式 */
+.shop-item{
+	display: flex;
+	padding: 20rpx;
+	border-bottom: 1rpx solid #ddd; 
+	position: relative;
+}
+
+.shop-img{
+	width: 160rpx;
+	height: 160rpx;
+	margin-right: 20rpx;
+}
+
+.shop-info{
+	line-height: 1.5;
+	width: 520rpx;
+	font-size: 12px;
+	display: flex;
+	flex-direction:column;
+	color: #666;
+}
+
+.shop-title{
+	font-size: 16px;
+	color: #333;
+}
+
+.more {
+        height: 700rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #666;
+        font-size: 16px;
+        
+}
+

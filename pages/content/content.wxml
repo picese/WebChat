@@ -1,0 +1,28 @@
+<!---->
+<view class='cell'>
+        <navigator class='cell-item arrow' hover-class='none'>
+                <text>帐号与安全</text>
+        </navigator>
+         <view class='divider'></view>
+        <navigator class='cell-item arrow' hover-class='none'>
+                <text>最新消息通知</text>
+        </navigator>
+        <navigator class='cell-item arrow' hover-class='none'>
+                <text>隐私</text>
+        </navigator>
+        <navigator class='cell-item arrow' hover-class='none'>
+                <text>通用</text>
+        </navigator>
+        <navigator class='cell-item arrow' hover-class='none'>
+                <text>版本</text>
+        </navigator>
+         <view class='divider'></view>
+        <navigator class='cell-item center' hover-class='none'>
+                <text>切换帐号</text>
+        </navigator>
+         <view class='divider'></view>
+        <navigator class='cell-item center' hover-class='none'>
+                <text>退出登录</text>
+        </navigator>
+         <view class='divider'></view>
+</view>

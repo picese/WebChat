@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="item-content">
+    <view class="box">
+      <view class="name">
+        <image src="{{img}}"></image>
+        <text>{{ name }}</text>
+      </view>
+      <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
+        <image src="{{ item.img }}"></image>
+        <text class="title">{{item.title}}</text>
+        <text class="price">￥ {{item.price}} 元</text>
+        <view class="opera">
+          <text class="num">x{{item.num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-bar">
+    <view class="count">  
+        合计 <text class="num">{{count.money}} 元</text> 
+    </view>
+    <view class="btn">
+        <text bindtap='pay'>微信支付</text>
+    </view>
+  </view>
+</view>

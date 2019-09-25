@@ -1,0 +1,19 @@
+<!--商品页-->
+<view class="shop">
+	<block wx:for="{{ contents }}" wx:key="id">
+		<navigator class="shop-item" url="../details/details?cat={{ item.id }}&title={{ item.name}}&img={{item.images[0]}}" hover-class="none">
+			<image src="{{ item.images[0] }}" class="shop-img" mold="aspectFill"></image>
+			<view class="shop-info" >
+				<text class="shop-title ell">{{ item.name }}</text>
+				<text class="shop-tle">电话：{{ item.phone }}</text>
+				<text class="shop-adders ell">地址：{{ item.address }}</text>
+				<text class="shop-time">营业时间：{{ item.businessHours }}</text>
+			</view>
+			<view class="shop-star">
+				<view class="star-before" style="width:{{ item.score}}%">★★★★★</view>
+				<view class="star-after">★★★★★</view>
+			</view>
+		</navigator>
+	</block>
+</view>
+<view class='more' wx:if="{{ !all }}">已经加载所有数据</view>

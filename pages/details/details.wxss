@@ -1,0 +1,336 @@
+/**datails.wxss**/
+
+.img {
+        width: 100%;
+        display: block;
+        background-size:cover;
+}
+
+/* 导航 */
+
+.CommodityNavBar {
+        float:left;
+        height:100%;
+        width:200rpx;
+        padding-bottom:0;
+        text-align:center;
+        overflow:scroll;
+        background:#eee;
+}
+
+.CommodityNavBar .CommodityMenu {
+        height: 80rpx;
+        color: #333;
+        font-size: 14px;
+        line-height: 40px;
+}
+
+.navbar {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 0;
+        text-align: center;
+        overflow: scroll;
+        background: #fff;
+        border-bottom:1rpx solid #ccc;
+}
+
+.navbar .menu {
+        height: 80rpx;
+        width: 190rpx;
+        color: #333;
+        font-size: 14px;
+        line-height: 40px;
+        border-radius: 6rpx;
+        margin: 5px 0;
+}
+
+.navbar .menu.active {
+        background: #a8df;
+}
+
+/* 点餐 */
+
+.item-content {
+        float: left;
+        width: 100%;
+        height: 100%;
+}
+
+.item-content .box {
+        height: 100%;
+        padding: 20rpx 0 0 20rpx;
+        overflow: scroll;
+}
+
+.CommodityNavBar .menu {
+        height: 80rpx;
+        width: 190rpx;
+        color: #333;
+        font-size: 14px;
+        line-height: 40px;
+        border-top: 1px solid #eee;
+}
+
+.CommodityNavBar .CommodityMenu.active {
+        background: #fff;
+        font-size: 14px;
+}
+
+.item-content .box.active {
+        padding-bottom: 160rpx;
+}
+
+.item-content .box::-webkit-scrollbar {
+        width: 0;
+}
+
+.item-content .box .item {
+        height: 160rpx;
+        padding: 20rpx 0 20rpx 0;
+        margin-bottom: 10px;
+        background: #fff;
+        border-bottom:2rpx solid #ccc;
+}
+
+.item-content .box .item image {
+        display: block;
+        float: left;
+        height: 160rpx;
+        width: 180rpx;
+        margin-right: 20rpx;
+}
+
+.item-content .box .item text {
+        display: block;
+        font-size: 32rpx;
+}
+
+.item-content .box .item .title {
+        margin-bottom: 10rpx;
+        font-weight: bolder;
+}
+
+.item-content .box .item .price {
+        color: red;
+        font-size: 36rpx;
+        margin-bottom: 10rpx;
+}
+
+.item-content .box .item .opera{
+  padding-right:10px;
+  text-align:right;
+}
+
+.item-content .box .item .opera text{
+  display:inline-block;
+}
+
+.item-content .box .opera .btn{
+  display:inline-block;
+  height:50rpx;
+  width:50rpx;
+  line-height:22px;
+  text-align:center;
+  color:#fff;
+  font-weight:bolder;
+  background:orange;
+  border-radius:50%;
+}
+
+.item-content .box .opera .num{
+  padding:2px 15px;
+  margin:0 4px;
+  border:1px solid #ccc;
+}
+
+/* 购物车 */
+.bottom-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 160rpx;
+        line-height: 160rpx;
+        background: #fff;
+        box-shadow: 0 -10rpx 20rpx #ccc;
+}
+
+.bottom-bar.hidden {
+       display: none;
+}
+
+.bottom-bar>view {
+        flex-grow: 1;
+}
+
+.bottom-bar .count {
+        padding-left: 20rpx;
+}
+
+.bottom-bar .num {
+        margin-right: 20rpx;
+        font-size: 26rpx;
+        font-weight: bolder;
+        color: red;
+}
+
+.bottom-bar .btn {
+        height: 80rpx;
+        width: 100rpx;
+        margin: 40rpx 20rpx 0 0;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        background: orange;
+        padding: 0 30rpx;
+}
+
+.shop {
+        width: 90%;
+        display: flex;
+        padding: 20rpx;
+        position: relative;
+        margin: 20rpx auto;
+}
+
+.shop-img {
+        width: 300rpx;
+        height: 400rpx;
+        position: absolute;
+        right: 7rpx;
+        top: 30rpx;
+        border-radius: 14rpx;
+}
+
+.shop-info {
+        line-height: 1.5;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        color: #666;
+}
+
+.shop-buy {
+        width: 60%;
+        height: 80rpx;
+        background-color: #f60;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rpx;
+        margin: 30rpx 0 10rpx 60%;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+}
+
+.pt {
+        padding: 10rpx 0;
+}
+
+.shop-service {
+        padding: 20rpx 0;
+        border-top: 1rpx solid #ccc;
+        border-bottom: 1rpx solid #ccc;
+}
+
+.shop-title {
+        font-size: 17px;
+        height: 130rpx;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+}
+
+.shop-stars {
+        display: flex;
+        position: absolute;
+        left: 20rpx;
+        top: 83rpx;
+}
+
+.star-score {
+        font-size: 14px;
+        padding: 0 10rpx;
+        margin-top: 10rpx;
+}
+
+.star-sum {
+        font-size: 14px;
+        margin-top: 10rpx;
+}
+
+.comment {
+        width: 100%;
+        padding: 30rpx 0;
+        position: relative;
+        border-bottom: 1px solid #ccc;
+}
+
+.comment-say {
+        font-size: 16px;
+        margin-left: 36rpx;
+        padding: 30rpx 0 10rpx 30rpx;
+}
+
+.comment-info {
+        line-height: 1.5;
+        width: 100%;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        color: #666;
+}
+
+.comment-img {
+        width: 90rpx;
+        height: 90rpx;
+        padding: 0 35rpx;
+}
+
+.userName {
+        font-size: 18px;
+        color: #333;
+}
+
+.date {
+        position: absolute;
+        right: 30rpx;
+        top: 90rpx;
+}
+
+.comment-stars {
+        font-size: 16px;
+        position: absolute;
+        left: 164rpx;
+        top: 84rpx;
+}
+
+.commentary {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+}
+
+.content {
+        margin: 20rpx 0 20rpx 156rpx;
+        color: #666;
+        width: 76%;
+}
+
+.reply {
+        margin-left: 156rpx;
+        color: #31bbac;
+}
+
+.commentary-imgs {
+        margin: 20rpx 0 0 136rpx;
+}
+
+.commentary-img {
+        width: 140rpx;
+        height: 140rpx;
+        margin-left: 20rpx;
+}

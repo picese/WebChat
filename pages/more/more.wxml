@@ -1,0 +1,8 @@
+<view class="index-content">
+	<block wx:for="{{ moreList }}" wx:key="id">
+		<navigator class="index-item bdr" url="../list/listt?cat={{ item.id }}&title={{ item.name}}" hover-class="none">
+                        <image src="{{ item.icon }}" mode='aspectFill' lazy-load></image>
+                        <text>{{ item.name}}</text>
+			</navigator>
+		</block>
+	</view>

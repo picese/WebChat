@@ -1,0 +1,48 @@
+<!-- 主页架构 -->
+<view>
+<!-- 图片轮播 -->
+	<swiper indicator-dots="{{ true }}" autoplay="{{ true }}" interval="3000" duration="600" class="swiper">
+	    <swiper-item wx:for="{{ sliderImgs }}" wx:key="id">
+	    	<navigator class="slider">
+			  	<image src="{{ item.url }}" class="slide-image" width="355" height="190" mode='aspectFill'></image>
+			</navigator>
+	    </swiper-item>
+	</swiper>
+
+<!-- 导航分区start -->
+	<view class="index-content">
+		<block wx:for="{{ contentLists }}" wx:key="id">
+			<navigator class="index-item bdr" url="../list/listt?cat={{ item.id }}&title={{ item.name}}" hover-class="none">
+				<image src="{{ item.icon }}" mode='aspectFill' lazy-load></image>
+				<text>{{ item.name}}</text>
+			</navigator>
+		</block>
+    <navigator class="index-item bdr" url="../more/more" hover-class="none" hidden="{{flag}}">
+			<text>更多</text>
+		</navigator>
+	</view>
+
+<view class="divider"></view>
+
+<view class='recommend' hidden="{{flag}}">为你推荐</view>
+
+<!--商品页-->
+<view class="shop">
+	<block wx:for="{{ shopLists }}" wx:key="id">
+		<navigator class="shop-item" url="../details/details?cat={{ item.id }}&title={{ item.name}}" hover-class="none">
+			<image src="{{ item.images[0] }}" class="shop-img" mold="aspectFill"></image>
+			<view class="shop-info" >
+				<text class="shop-title ell">{{ item.name }}</text>
+				<text class="shop-tle">电话：{{ item.phone }}</text>
+				<text class="shop-adders ell">地址：{{ item.address }}</text>
+				<text class="shop-time">营业时间：{{ item.businessHours }}</text>
+			</view>
+			<view class="shop-star">
+				<view class="star-before" style="width:{{ item.score}}%">★★★★★</view>
+				<view class="star-after">★★★★★</view>
+			</view>
+		</navigator>
+	</block>
+</view>
+
+</view>

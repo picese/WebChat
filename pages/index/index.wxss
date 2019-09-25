@@ -1,0 +1,103 @@
+/* 主页样式 */
+
+/* 图片轮播 */
+
+.slider, .swiper, .slider image {
+        width: 100%;
+        height: 390rpx;
+        overflow: hidden;
+}
+
+/* 导航分区 */
+
+.index-content {
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.index-item {
+        width: 33.33333%;
+        height: 200rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1rpx solid #ccc;
+        font-size: 14px;
+        cursor: pointer;
+}
+
+.index-item:nth-child(3n)::after {
+        width: 0rpx;
+}
+
+.index-item image {
+        width: 70rpx;
+        height: 70rpx;
+        padding-bottom: 10rpx;
+}
+
+/* 首页入口 */
+
+.index-enter {
+        padding: 20rpx 30rpx;
+        display: flex;
+}
+
+.enter-item {
+        width: 50%;
+        height: 178rpx;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+}
+
+.enter-item image {
+        width: 280rpx;
+        height: 178rpx;
+        border-radius: 6rpx;
+}
+
+.recommend {
+        background-color: #f1f1f1;
+        font-size: 16px;
+        padding: 0 0 22rpx 20rpx;
+}
+
+/* 详情页样式 */
+
+.shop-item {
+        display: flex;
+        padding: 20rpx;
+        border-bottom: 1rpx solid #ddd;
+        position: relative;
+}
+
+.shop-img {
+        width: 160rpx;
+        height: 160rpx;
+        margin-right: 20rpx;
+}
+
+.shop-info {
+        line-height: 1.5;
+        width: 520rpx;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        color: #666;
+}
+
+.shop-title {
+        font-size: 16px;
+        color: #333;
+}
+
+.more {
+        height: 700rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #666;
+        font-size: 16px;
+}

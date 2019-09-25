@@ -1,0 +1,89 @@
+<!--details.wxml-->
+<block wx:for="{{ detailsContent }}" wx:key="item.id">
+<view class="container">
+        <image src="{{ item.images[0] }}" class="img" mode="aspectFill"></image>
+
+        <!-- 导航  -->
+        <view class="navbar">
+                <view class="{{NavBarIndex === index ? 'menu active' : 'menu'}}" wx:for="{{NavBarMenus}}" wx:key="{{item.id}}" data-index="{{index}}" bindtap='NavBarMenu'>{{item.name}}
+                </view>
+        </view>
+
+        <!-- 点餐 -->
+        <view class="item-content" hidden="{{ NavBarIndex != 0}}">
+                <view class="CommodityNavBar">
+                        <view class="{{tabIndex === index ? 'CommodityMenu active' : 'menu'}}" wx:for="{{menus}}" wx:key="{{item.id}}" data-index="{{index}}" bindtap='tabMenu'>{{item.menu}}
+                        </view>
+                </view>
+                <view class="{{orderCount.num === 0 ? 'box' : 'box active'}}" hidden="{{ tabIndex != 0}}">
+                        <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
+                                <image src="{{ item.img }}"></image>
+                                <text class="title">{{item.title}}</text>
+                                <text class="price">￥ {{item.price}} 元</text>
+                                <view class="opera">
+          <text class="btn" id="del" bindtap="add" data-id="{{item.id}}" data-index="{{index}}">-</text>
+          <text class="num">{{item.num}}</text>
+          <text class="btn" id="add" bindtap="add" data-id="{{item.id}}" data-index="{{index}}">+</text>
+        </view>
+                        </view>
+                </view>
+        </view>
+
+        <!-- 点评 -->
+        <view class="item-content" hidden="{{ NavBarIndex != 1}}">
+           <view class="comment-say">网友评论：</view>
+  <view class="comment" wx:for="{{ item.comments }}" wx:key="id">
+      <view class="comment-info">
+              <view wx:if="{{condition}}">
+                      <image src="{{ item.images[0] }}" class="comment-img" mold="aspectFill" alt="" />
+              </view>
+              <image src="/assets/images/avatar.png" class="comment-img" mold="aspectFill" alt="" />
+              <text class="userName">{{ item.name }}</text>
+              <view class="comment-stars" style="width:{{ item.rating}}%">
+                      <view class="star-before">★★★★★</view>
+                      <view class="star-after">★★★★★</view>
+              </view>
+              <text class="date">{{ item.date }}</text>
+      </view>
+      <view class="commentary">
+              <text class="content">{{ item.content }}</text>
+              <!-- <text class="reply">{{ }}</text> -->
+      </view>
+      <!-- <view class="commentary-imgs">
+              <image src="{{ item.images}}" alt="" />
+      </view> -->
+  </view>
+        </view>
+
+        <!-- 商家信息 -->
+        <view class="item-content" hidden="{{ NavBarIndex != 2}}">
+          <view class="shop">
+      <view class="shop-info">
+              <view class="shop-title">{{ item.name}}</view>
+              <text class="shop-tle pt">电话：{{ item.phone }}</text>
+              <text class="shop-adders">地址：{{ item.address }}</text>
+              <text class="shop-time pt">营业时间：{{ item.businessHours }}</text>
+              <text class="shop-service">支持服务：{{ item.supportService }}</text> 
+      </view>
+      <view class="shop-stars">
+              <view class="star-before" style="width:{{ item.score}}%">★★★★★</view>
+              <view class="star-after">★★★★★</view>
+              <view class="star-score">5分</view>
+              <view class="star-sum">人均¥14</view>
+      </view>
+    </view>
+        </view>
+
+        <!-- 购物车 -->
+        <view class="{{bottomFlag ? 'bottom-bar' : 'bottom-bar hidden'}}">
+                <view class="count">
+                共 <text class="num">{{orderCount.num}} 件</text> 
+                         合计
+                        <text class="num">{{orderCount.money}} 元</text>
+                </view>
+                <navigator class="btn" url="../order/order" hover-class="none">
+                        <text bindtap='card'>去结算</text>
+                </navigator>
+        </view>
+</view>
+</block>

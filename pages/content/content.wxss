@@ -1,0 +1,12 @@
+/* pages/content/content.wxss */
+page {
+		background-color: #f1f1f1;
+}
+
+.cell {
+        font-size: 15px;
+}
+
+.cell-item {
+	padding: 30rpx 26rpx;
+}

@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/content/content",
+    "pages/list/listt",
+    "pages/more/more",
+    "pages/details/details",
+    "pages/order/order"
+  ],
+
+  "window":{
+    "navigationBarBackgroundColor": "#f60",
+    "navigationBarTitleText": "本地生活",
+    "navigationBarTextStyle":"white"
+  }
+}
